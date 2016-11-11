@@ -1,0 +1,535 @@
+
+<!doctype html>
+
+
+<html class="no-js" lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="//static.leslibraires.fr/lib/html5boilerplate/5.3.0/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="//static.leslibraires.fr/lib/html5boilerplate/5.3.0/css/premain.css">
+    <link rel="stylesheet" type="text/css" href="//static.leslibraires.fr/lib/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//static.leslibraires.fr/gibert_jeune/style/base.css">
+    <link rel="stylesheet" type="text/css" href="//static.leslibraires.fr/gibert_jeune/style/main.css">
+    <link rel="stylesheet" type="text/css" href="//static.leslibraires.fr/lib/html5boilerplate/5.3.0/css/postmain.css">
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<header>
+    <div class="container-fluid visible-xs-block" id="small-topbar">
+        <a class="btn btn-default btn-lg" role="button" data-toggle="collapse" data-parent="#small-topbar" href="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <div class="dropdown pull-right">
+            <button id="cart-drodown" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="cart-drodown">
+                <li>
+                    <a href="/cart/">réservation </a>
+                </li>
+                <li>
+                    <a href="//librairie-en-ligne.gibertjeune.fr/GIBERTJ/fr/basket/Default.aspx">livraison à domicile</a>
+                </li>
+                <li>
+                    <a href="http://livresnumeriques.gibertjeune.fr/Pages/Commande/DetailPanier.aspx">e-book</a>
+                </li>
+            </ul>
+        </div>
+        <a class="btn btn-default pull-right" role="button" data-toggle="collapse" data-parent="#small-topbar" href="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
+            <i class="fa fa-search"></i>
+        </a>
+
+        <div class="row right-marged">
+            <div class="col-xs-6 text-center">
+                <a href="/login/">Connexion</a>
+            </div>
+            <div class="col-xs-6 text-center">
+                <a href="/registration/">Créer un compte</a>
+            </div>
+        </div>
+
+
+        <div class="panel">
+            <div class="collapse" id="collapseMenu">
+                <ul>
+                    <li><a href="/revendez-vos-livres/">Revendez vos livres</a></li>
+                    <li><a href="/boutique/livres/">Livres</a></li>
+                    <li><a href="/boutique/ebooks/">E-Books</a></li>
+                    <li><a href="/rencontres/">Événements</a></li>
+                    <li><a href="/infos-pratiques/">Infos pratiques</a></li>
+
+                    <li><a href="/qui-sommes-nous/">Qui sommes-nous ?</a></li>
+                    <li><a href="/conditions-generales-utilisation/">Conditions générales d'utilisation</a></li>
+                    <li><a href="/foire-aux-questions/">FAQ (questions)</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/mentions-legales/">Mentions légales</a></li>
+                    <li><a href="/moyens-de-paiement/">Moyens de paiement</a></li>
+                    <li><a href="/nous-rejoindre/">Nous rejoindre</a></li>
+                    <li><a href="http://professionnels.gibertjeune.paris/page/public/espace-professionnels.php">Espace professionnel</a></li>
+                </ul>
+            </div>
+            <div class="collapse" id="collapseSearch">
+                <form class="search-form" method="get" action="/recherche/">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="q" placeholder="Rechercher un livre">
+                        <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">OK</button>
+              </span>
+                    </div>
+                </form>
+                <a href="/recherche_avancee/">Recherche avancée</a>
+            </div>
+        </div>
+
+        <a href="/" class="text-center">
+            <img src="//static.leslibraires.fr/gibert_jeune/image/logo.png" class="img-responsive center-block" id="xs-logo">
+        </a>
+    </div>
+
+    <div class="container-fluid hidden-xs">
+        <ul id="topbar">
+
+            <li></li>
+            <li><a href="/login/">Connexion</a></li>
+
+            <li>|</li>
+            <li>
+                <a href="/cart/">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    panier (réservation)
+
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="//librairie-en-ligne.gibertjeune.fr/GIBERTJ/fr/basket/Default.aspx">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    panier (livraison à domicile)
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://livresnumeriques.gibertjeune.fr/Pages/Commande/DetailPanier.aspx">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    panier (e-book)
+                </a>
+            </li>
+            <li>|</li>
+            <li><a href="http://professionnels.gibertjeune.paris/page/public/espace-professionnels.php">Espace pro</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container-fluid hidden-xs">
+        <div class="row">
+            <div class="col-lg-10 col-xs-12">
+                <a href="/"><img id="small-logo" src="//static.leslibraires.fr/gibert_jeune/image/logo.png" class="img-responsive"></a>
+
+                <ul id="header-section">
+                    <li><a href="/revendez-vos-livres/">Revendez vos livres</a></li>
+                    <li><a href="/boutique/livres/">Livres</a></li>
+                    <li><a href="/boutique/ebooks/">E-Books</a></li>
+                    <li><a href="/rencontres/">Événements</a></li>
+                    <li><a href="/infos-pratiques/">Infos pratiques</a></li>
+                    <li class="social">
+                        <a href="//fr-fr.facebook.com/Gibert.Jeune" target="_blank"><i class="fa fa-lg fa-facebook-official"></i></a>
+                        <a href="//twitter.com/gibert_jeune" target="_blank"><i class="fa fa-lg fa-twitter"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-lg-2 col-xs-12">
+                <form class="search-form" method="get" action="/recherche/">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="q" placeholder="Rechercher un livre">
+                        <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">OK</button>
+                </span>
+                    </div>
+                </form>
+                <a href="/recherche_avancee/">Recherche avancée</a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<div class="container">
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="image product-image">
+
+                <span class="fa fa-book fa-5x"></span>
+
+            </div>
+        </div>
+        <div class="col-md-8">
+
+
+
+            <div class="product-category"><span>BD, Comics, Mangas</span></div>
+
+
+
+            <h1>
+
+                <span itemprop="name">La légende de Darkseid</span>
+            </h1>
+
+
+
+
+            <h2 itemprop="author">Ostrander, John</h2>
+
+
+
+
+            <!-- Product info -->
+            <hr>
+
+            <ul class="info-table">
+
+                <li>EAN13 : <strong>9782365775717</strong></li>
+
+
+
+                <li itemprop="publisher">
+                    Éditeur : <strong>Urban comics</strong>
+
+                </li>
+
+
+
+                <li itemprop="datePublished" datetime="2014-11-01">
+                    Date de publication : <strong>11/2014</strong>
+                </li>
+
+
+
+                <li>Collection : <strong>Dc nemesis</strong></li>
+
+
+
+
+
+                <li itemprop="numberOfPages">Nombre de pages : <strong>256</strong></li>
+
+            </ul>
+
+            <hr>
+
+            <form class="product-offers" action="/add-to-cart/" method="post">
+                <input type="hidden" name="next" value="/article/7466710-la-legende-de-darkseid-ostrander-john-urban-comics">
+
+                <div class="row row-space">
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="yellow-box">
+                            Réservation
+                        </div>
+
+                        <ul>
+
+                            <li>
+
+                                <input class="radio-offer" type="radio" name="offertype" disabled style="display: none;">
+                                <label>
+                                    <i class="fa fa-lg pull-left"></i>
+                                    <div>
+                                        <div class="uppercase">Neuf</div>
+                                        <strong>Non disponible</strong>
+                                    </div>
+                                </label>
+
+                            </li>
+
+                            <li>
+
+                                <input class="radio-offer" type="radio" name="offertype" disabled style="display: none;">
+                                <label>
+                                    <i class="fa fa-lg pull-left"></i>
+                                    <div>
+                                        <div class="uppercase">Occasion</div>
+                                        <strong>Non disponible</strong>
+                                    </div>
+                                </label>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="yellow-box">
+                            Expédition
+                        </div>
+
+                        <ul>
+
+                            <li>
+
+
+                                <input class="radio-offer" type="radio" name="offertype" data-target="select-shipping-New" data-validation="true" id="radio-shipping-New" style="display: none;">
+                                <label for="radio-shipping-New">
+                                    <i class="fa fa-lg pull-left"></i>
+                                    <div>
+                                        <div class="uppercase">Neuf</div>
+
+                                        <strong>22,50 €</strong>
+
+                                    </div>
+                                </label>
+
+
+                            </li>
+
+                            <li>
+
+                                <input class="radio-offer" type="radio" name="offertype" disabled style="display: none;">
+                                <label>
+                                    <i class="fa fa-lg pull-left"></i>
+                                    <div>
+                                        <div class="uppercase">Occasion</div>
+                                        <strong>Non disponible</strong>
+                                    </div>
+                                </label>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                        <div class="yellow-box">
+                            E-Book
+                        </div>
+
+                        <ul>
+
+                            <li>
+
+                                <input class="radio-offer" type="radio" name="offertype" disabled style="display: none;">
+                                <label>
+                                    <i class="fa fa-lg pull-left"></i>
+                                    <div>
+                                        <div class="uppercase">Numérique</div>
+                                        <strong>Non disponible</strong>
+                                    </div>
+                                </label>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div id="select-shop">
+                    <div class="text-center select-shop">
+                        <label>Magasin :</label>
+                        <input class="offer-select form-control" value="Choisir" disabled>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="text-center select-shop" id="select-shipping-New" style="display: none;">
+
+                        <label>Magasin :</label>
+
+
+                        <input type="hidden" value="261985482" name="offer_id" disabled>
+                        <input class="offer-select form-control" name="offer" value="Choisir" disabled>
+
+                        </input>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-black" type="submit" disabled>Valider</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <div id="contributions">
+    </div>
+
+
+</div>
+
+<footer>
+    <!-- TOP FOOTER -->
+    <div id="top-sm-footer" class="visible-xs-block">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <form class="form-inline search-form newsletter-form" action="/newsletter/subscribe/" method="post">
+                        <label for="footer-newsletter-input-sm" class="uppercase">Inscription newsletter</label>
+                        <p>Inscrivez-vous à notre newsletter et ne manquez aucune actualité de Gibert Jeune.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="votre adresse e-mail" id="footer-newsletter-input-sm" name="email" required>
+                            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">OK</button>
+              </span>
+                        </div>
+                        <div class="alert alert-success">Vous êtes maintenant inscrit à la newsletter</div>
+                        <div class="alert alert-danger">Une erreur est survenue, merci de <a href="/contact/" class="alert-link">nous contacter</a>.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="top-footer">
+        <div class="container">
+            <div class="row center-block right-marged">
+                <div class="col-md-4 col-md-offset-2 col-xs-6 col-xs-offset-0">
+                    <img src="//static.leslibraires.fr/gibert_jeune/image/reassurance1.png" class="center-block">
+                    <h5>Réservation gratuite</h5>
+                    <h5>et immédiate en magasin</h5>
+                    <p>
+                        En savoir plus<br>
+                        en suivant <a href="/reservation/">ce lien</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <img src="//static.leslibraires.fr/gibert_jeune/image/reassurance2.png" class="center-block">
+                    <h5>Commande en ligne&nbsp;:</h5>
+                    <h5><i>Livraison à domicile</i></h5>
+                    <h5><i>et retrait en magasin</i></h5>
+                    <p>Tous nos magasins <a href="/infos-pratiques/">ici</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MIDDLE FOOTER -->
+    <div id="mid-footer" class="hidden-xs">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <form class="form-inline search-form newsletter-form" action="/newsletter/subscribe/" method="post">
+                        <label for="footer-newsletter-input" class="uppercase">Inscription newsletter</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="votre adresse e-mail" id="footer-newsletter-input" name="email" required>
+                            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">OK</button>
+              </span>
+                        </div>
+                        <div class="alert alert-success">Vous êtes maintenant inscrit à la newsletter</div>
+                        <div class="alert alert-danger">Une erreur est survenue, merci de <a href="/contact/" class="alert-link">nous contacter</a>.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM FOOTER -->
+    <div id="bottom-footer" class="hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h5>Gibert Jeune</h5>
+                    <p><a href="/revendez-vos-livres/">Revendez vos livres</a></p>
+                    <p><a href="/boutique/livres/">Livres</a></p>
+                    <p><a href="/boutique/ebooks/">E-Books</a></p>
+                    <p><a href="/qui-sommes-nous/">Qui sommes-nous ?</a></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Service Client</h5>
+                    <p><a href="/conditions-generales-utilisation/">Conditions générales d'utilisation</a></p>
+                    <p><a href="/foire-aux-questions/">FAQ (questions)</a></p>
+                    <p><a href="/contact/">Contact</a></p>
+                    <p><a href="/mentions-legales/">Mentions légales</a></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Infos Pratiques</h5>
+                    <p><a href="/moyens-de-paiement/">Moyens de paiement</a></p>
+                    <p><a href="/infos-pratiques/">Librairies et horaires</a></p>
+                    <p><a href="http://professionnels.gibertjeune.paris/page/public/espace-professionnels.php">Espace professionnel</a></p>
+                    <p><a href="/nous-rejoindre/">Nous rejoindre</a></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Événements</h5>
+                    <p><a href="/rencontres/">À venir</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="//static.leslibraires.fr/lib/jquery/1.10.2/jquery.min.js"></script>
+<script src="//static.leslibraires.fr/lib/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="//static.leslibraires.fr/gibert_jeune/js/main.js"></script>
+
+<div id="cookie-warning">
+    <a class="cookie-close">OK</a>
+    <span>
+    En poursuivant votre navigation sur le site, vous acceptez l'utilisation de cookies permettant d'améliorer la qualité de nos services.
+    <a href="/information-cookies/">En savoir plus</a>.
+    <a class="cookie-refuse">Refuser</a>.
+      </span>
+</div>
+<script src="//static.leslibraires.fr/gibert_jeune/js/cnil_analytics.js"></script>
+<script>
+    analytics.cookieAnalytics("UA-79684551-1");
+</script>
+
+
+
+
+
+<script>
+    ecom.addContributions("/ws/add_contributions/", 7466710, "/ws/improve_product_cells/");
+</script>
+<script src="//static.leslibraires.fr/gibert_jeune/js/add_to_cart.js"></script>
+
+
+</body>
+</html>

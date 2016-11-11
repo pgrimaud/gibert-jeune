@@ -1,0 +1,25 @@
+{
+  "name": "pgrimaud/gibert-jeune",
+  "type": "library",
+  "description": "Little scraper for https://www.gibertjeune.fr",
+  "homepage": "https://github.com/pgrimaud/gibert-jeune",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pierre Grimaud",
+      "email": "grimaud.pierre@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "GibertJeune\\": "src/"
+    }
+  },
+  "require": {
+    "fabpot/goutte": "^3.1"
+  },
+  "require-dev": {
+    "codeclimate/php-test-reporter": "^0.3.2",
+    "phpunit/phpunit": "^5.6"
+  }
+}
