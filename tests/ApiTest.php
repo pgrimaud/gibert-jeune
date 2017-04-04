@@ -1,4 +1,5 @@
 <?php
+
 namespace UrbanComics\tests;
 
 use Goutte\Client;
@@ -18,9 +19,9 @@ class ScraperTest extends \PHPUnit_Framework_TestCase
         $fixtures = file_get_contents(__DIR__ . '/fixtures/product.html');
 
         $response = new Response(200, [], $fixtures);
-        $mock = new MockHandler([$response]);
+        $mock     = new MockHandler([$response]);
 
-        $handler = HandlerStack::create($mock);
+        $handler      = HandlerStack::create($mock);
         $guzzleClient = new \GuzzleHttp\Client(['handler' => $handler]);
 
         $this->client = new Client();
@@ -44,40 +45,46 @@ class ScraperTest extends \PHPUnit_Framework_TestCase
         $product = $api->getProduct();
 
         $mustReturn = [
-            0 => [
-                'title' => 'Réservation',
-                'prices' => [
-                    0 => [
-                        'state' => 'Neuf',
-                        'price' => 0.0
-                    ],
-                    1 => [
-                        'state' => 'Occasion',
-                        'price' => 0.0
+            'prices' => [
+                0 => [
+                    'title'  => 'Réservation',
+                    'prices' => [
+                        0 => [
+                            'state' => 'Neuf',
+                            'price' => 0.0
+                        ],
+                        1 => [
+                            'state' => 'Occasion',
+                            'price' => 0.0
+                        ]
+                    ]
+                ],
+                1 => [
+                    'title'  => 'Expédition',
+                    'prices' => [
+                        0 => [
+                            'state' => 'Neuf',
+                            'price' => 22.5
+                        ],
+                        1 => [
+                            'state' => 'Occasion',
+                            'price' => 0.0
+                        ]
+                    ]
+                ],
+                2 => [
+                    'title'  => 'E-Book',
+                    'prices' => [
+                        0 => [
+                            'state' => 'Numérique',
+                            'price' => 0.0
+                        ]
                     ]
                 ]
             ],
-            1 => [
-                'title' => 'Expédition',
-                'prices' => [
-                    0 => [
-                        'state' => 'Neuf',
-                        'price' => 22.5
-                    ],
-                    1 => [
-                        'state' => 'Occasion',
-                        'price' => 0.0
-                    ]
-                ]
-            ],
-            2 => [
-                'title' => 'E-Book',
-                'prices' => [
-                    0 => [
-                        'state' => 'Numérique',
-                        'price' => 0.0
-                    ]
-                ]
+            'shops'  => [
+                'secondhand' => [],
+                'new'        => [],
             ]
         ];
 
