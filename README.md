@@ -24,59 +24,77 @@ Will return :
 ```php
 Array
 (
-    [0] => Array
+    [prices] => Array
         (
-            [title] => Réservation
-            [prices] => Array
+            [0] => Array
                 (
-                    [0] => Array
+                    [title] => Réservation
+                    [prices] => Array
                         (
-                            [state] => Neuf
-                            [price] => 0
+                            [0] => Array
+                                (
+                                    [state] => Neuf
+                                    [price] => 0
+                                )
+
+                            [1] => Array
+                                (
+                                    [state] => Occasion
+                                    [price] => 8.97
+                                )
+
                         )
 
-                    [1] => Array
+                )
+
+            [1] => Array
+                (
+                    [title] => Expédition
+                    [prices] => Array
                         (
-                            [state] => Occasion
-                            [price] => 0
+                            [0] => Array
+                                (
+                                    [state] => Neuf
+                                    [price] => 14.95
+                                )
+
+                            [1] => Array
+                                (
+                                    [state] => Occasion
+                                    [price] => 0
+                                )
+
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [title] => E-Book
+                    [prices] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [state] => Numérique
+                                    [price] => 0
+                                )
+
                         )
 
                 )
 
         )
 
-    [1] => Array
+    [shops] => Array
         (
-            [title] => Expédition
-            [prices] => Array
+            [secondhand] => Array
                 (
-                    [0] => Array
-                        (
-                            [state] => Neuf
-                            [price] => 14.95
-                        )
-
-                    [1] => Array
-                        (
-                            [state] => Occasion
-                            [price] => 0
-                        )
-
+                    [0] => 4 place Saint-Michel (1 en stock)
                 )
 
-        )
-
-    [2] => Array
-        (
-            [title] => E-Book
-            [prices] => Array
+            [new] => Array
                 (
-                    [0] => Array
-                        (
-                            [state] => Numérique
-                            [price] => 0
-                        )
-
+                    [0] => 4 place Saint-Michel (2 en stock)
                 )
 
         )
