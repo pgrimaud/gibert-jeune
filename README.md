@@ -2,7 +2,6 @@
 
 [![Packagist](https://img.shields.io/badge/packagist-install-brightgreen.svg)](https://packagist.org/packages/pgrimaud/gibert-jeune)
 [![Build Status](https://travis-ci.org/pgrimaud/gibert-jeune.svg?branch=master)](https://travis-ci.org/pgrimaud/gibert-jeune)
-[![Code Climate](https://codeclimate.com/github/pgrimaud/gibert-jeune/badges/gpa.svg)](https://codeclimate.com/github/pgrimaud/gibert-jeune)
 [![Test Coverage](https://codeclimate.com/github/pgrimaud/gibert-jeune/badges/coverage.svg)](https://codeclimate.com/github/pgrimaud/gibert-jeune/coverage)
 
 Little scraper for https://www.gibertjeune.fr
